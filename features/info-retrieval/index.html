@@ -1,0 +1,1270 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="详细介绍TG-FF资源管理助手v3.0.0的信息检索功能，帮助用户快速搜索和筛选Telegram对话中的消息内容。">
+      
+      
+        <meta name="author" content="TG-FF开发团队">
+      
+      
+        <link rel="canonical" href="https://tg-ff.com/features/info-retrieval/">
+      
+      
+        <link rel="prev" href="../resource-sending/">
+      
+      
+        <link rel="next" href="../video-tutorials/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>TG-FF 3.0.0 用户手册 - 信息检索功能详解 - TG-FF</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-TVEFRP16DY"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-TVEFRP16DY",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-TVEFRP16DY",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  
+  
+    
+      <meta name="keywords" content="Telegram消息搜索,电报聊天记录检索,TG-FF信息检索,Telegram历史消息查找,电报对话内容筛选">
+    
+  
+  
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3978085335977110" crossorigin="anonymous"></script>
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="TG-FF" class="md-header__button md-logo" aria-label="TG-FF" data-md-component="logo">
+      
+  <img src="../../assets/images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            TG-FF
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              TG-FF 3.0.0 用户手册 - 信息检索功能详解
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到暗色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到暗色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到亮色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到亮色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="选择当前语言">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="zh" class="md-select__link">
+              简体中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../zh-Hant/features/info-retrieval/" hreflang="zh-Hant" class="md-select__link">
+              繁體中文
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../getting-started/" class="md-tabs__link">
+        
+  
+    
+  
+  入门指南
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../user-manual-v3/" class="md-tabs__link">
+          
+  
+  用户手册
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../video-tutorials/" class="md-tabs__link">
+        
+  
+    
+  
+  使用教程
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../blog/" class="md-tabs__link">
+        
+  
+    
+  
+  博客
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../faq/" class="md-tabs__link">
+        
+  
+    
+  
+  常见问题
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../changelog/" class="md-tabs__link">
+        
+  
+    
+  
+  更新日志
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="TG-FF" class="md-nav__button md-logo" aria-label="TG-FF" data-md-component="logo">
+      
+  <img src="../../assets/images/logo.png" alt="logo">
+
+    </a>
+    TG-FF
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    首页
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    入门指南
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    用户手册
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            用户手册
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-manual-v3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    功能概览
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    普通下载
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../batch-download/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    批量下载
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../batch-text-conversion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    批量转文
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../message-forwarding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    消息转发
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../auto-download/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    自动下载
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../text-sending/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    文本发送
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resource-sending/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    资源发送
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    信息检索
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    信息检索
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      功能说明
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      界面布局
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用步骤
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="使用步骤">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 选择搜索对话
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 设置搜索条件
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 设置搜索条件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      关键词搜索
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      时间范围筛选
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      消息类型筛选
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      发送者筛选
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 执行搜索
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 浏览搜索结果
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 查看消息详情
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. 高级操作
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      高级搜索技巧
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="高级搜索技巧">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      复合条件搜索
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      正则表达式搜索
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      搜索结果过滤
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用场景
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="使用场景">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      历史信息查找
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      资源内容检索
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      专题内容整理
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      注意事项
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      常见问题解答
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../video-tutorials/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    使用教程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    博客
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    常见问题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changelog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    更新日志
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="_1">信息检索功能<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>本页面详细介绍TG-FF资源管理助手v3.0.0的信息检索功能。此功能可以灵活选择对话，关键词、时间等筛选条件，能快速检索想要的信息。</p>
+<div class="adspace-top">
+<!-- Google Ads 位置 -->
+</div>
+
+<h2 id="_2">功能说明<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>信息检索功能为用户提供强大的搜索能力，可以根据多种条件在Telegram对话中查找特定消息，从而快速定位所需的信息。无论是查找历史讨论内容、重要通知还是特定媒体资源，都能迅速精准地完成。</p>
+<h2 id="_3">界面布局<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p><img alt="信息检索界面1" src="../../assets/images/x1.png" width="700" /></p>
+<p><img alt="信息检索界面2" src="../../assets/images/x2.png" width="700" /></p>
+<p>信息检索模块的界面主要包含以下几个部分：</p>
+<ol>
+<li><strong>对话选择区</strong> - 选择需要搜索的对话来源</li>
+<li><strong>搜索条件设置区</strong> - 设置关键词、时间范围等筛选条件</li>
+<li><strong>搜索结果显示区</strong> - 以列表形式展示符合条件的消息</li>
+<li><strong>消息详情显示区</strong> - 查看选中消息的详细内容和上下文</li>
+</ol>
+<h2 id="_4">使用步骤<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h3 id="1">1. 选择搜索对话<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<ol>
+<li>在"对话选择"下拉菜单中，浏览并选择需要搜索的对话</li>
+<li>可以选择个人聊天、群组或频道</li>
+<li>也可以选择"所有对话"选项，在全部对话中进行搜索</li>
+<li>选择完成后，对话名称将显示在选择框中</li>
+</ol>
+<h3 id="2">2. 设置搜索条件<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<h4 id="_5">关键词搜索<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<ol>
+<li>在"关键词"输入框中输入需要搜索的关键词或词组</li>
+<li>支持多个关键词组合搜索，用空格分隔</li>
+<li>可以使用引号包围词组进行精确匹配，如"重要通知"</li>
+</ol>
+<h4 id="_6">时间范围筛选<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<ol>
+<li>点击"开始日期"和"结束日期"选择器</li>
+<li>设置需要搜索的消息的时间范围</li>
+<li>只有在指定时间范围内的消息才会被包含在搜索结果中</li>
+</ol>
+<h4 id="_7">消息类型筛选<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<ol>
+<li>在"消息类型"选项中，选择需要搜索的消息类型：</li>
+<li><strong>所有类型</strong>：搜索所有类型的消息</li>
+<li><strong>文本消息</strong>：只搜索纯文本消息</li>
+<li><strong>媒体消息</strong>：只搜索包含媒体(图片、视频等)的消息</li>
+<li><strong>链接消息</strong>：只搜索包含链接的消息</li>
+<li><strong>文件消息</strong>：只搜索包含文件附件的消息</li>
+</ol>
+<h4 id="_8">发送者筛选<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
+<ol>
+<li>在"发送者"输入框中，输入特定发送者的用户名或ID</li>
+<li>只搜索由指定发送者发送的消息</li>
+<li>留空则搜索所有发送者的消息</li>
+</ol>
+<h3 id="3">3. 执行搜索<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
+<ol>
+<li>完成上述搜索条件设置后，点击"搜索"按钮</li>
+<li>系统将根据设定的条件在选定的对话中进行搜索</li>
+<li>搜索进度将在界面中显示</li>
+<li>搜索完成后，结果将显示在搜索结果列表中</li>
+</ol>
+<h3 id="4">4. 浏览搜索结果<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
+<ol>
+<li>搜索结果以列表形式显示，包含消息预览、发送者、发送时间等信息</li>
+<li>关键词将在结果中高亮显示，便于快速识别</li>
+<li>点击任意结果项可在右侧详情区查看完整消息内容</li>
+<li>使用上下翻页按钮或滚动条浏览更多结果</li>
+</ol>
+<h3 id="5">5. 查看消息详情<a class="headerlink" href="#5" title="Permanent link">&para;</a></h3>
+<ol>
+<li>选中搜索结果中的任意消息后，右侧详情区将显示：</li>
+<li>完整的消息内容</li>
+<li>发送者信息</li>
+<li>发送时间详情</li>
+<li>媒体预览（如果消息包含媒体）</li>
+<li>消息上下文（前后几条消息）</li>
+</ol>
+<h3 id="6">6. 高级操作<a class="headerlink" href="#6" title="Permanent link">&para;</a></h3>
+<ol>
+<li>点击"导出结果"按钮可将搜索结果导出为文本或CSV文件</li>
+<li>点击"跳转到原对话"按钮可直接跳转到Telegram中的原始消息位置</li>
+<li>点击"保存搜索"按钮可保存当前搜索条件，方便下次快速执行相同的搜索</li>
+</ol>
+<h2 id="_9">高级搜索技巧<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<h3 id="_10">复合条件搜索<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<ol>
+<li>同时使用多个搜索条件可以更精确地定位信息</li>
+<li>例如：特定时间范围内、特定发送者发送的、包含特定关键词的媒体消息</li>
+</ol>
+<h3 id="_11">正则表达式搜索<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<ol>
+<li>在高级设置中启用"使用正则表达式"选项</li>
+<li>在关键词字段中输入符合正则表达式语法的搜索模式</li>
+<li>例如：<code>\d{4}-\d{2}-\d{2}</code>可以搜索日期格式如"2023-05-28"的内容</li>
+</ol>
+<h3 id="_12">搜索结果过滤<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<ol>
+<li>在搜索结果显示后，可以使用"结果过滤"功能进一步筛选</li>
+<li>在结果过滤框中输入新的关键词，实时过滤当前搜索结果</li>
+<li>这对于在大量搜索结果中快速定位特定内容非常有用</li>
+</ol>
+<h2 id="_13">使用场景<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h2>
+<h3 id="_14">历史信息查找<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<ol>
+<li>查找过去讨论过的特定话题或决策</li>
+<li>通过关键词和时间范围快速定位相关消息</li>
+<li>避免重复讨论或确认历史结论</li>
+</ol>
+<h3 id="_15">资源内容检索<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<ol>
+<li>查找共享过的特定类型的媒体或文件</li>
+<li>使用文件名关键词搜索特定文档</li>
+<li>快速找到之前分享的重要资源</li>
+</ol>
+<h3 id="_16">专题内容整理<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<ol>
+<li>搜索特定主题的所有相关讨论</li>
+<li>导出搜索结果，整理成专题资料</li>
+<li>帮助团队知识管理和内容沉淀</li>
+</ol>
+<h2 id="_17">注意事项<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>索引构建</strong>：首次搜索特定对话时，系统需要建立索引，可能需要一些时间</li>
+<li><strong>搜索范围</strong>：大型群组的全文搜索可能需要较长时间，建议适当缩小搜索范围</li>
+<li><strong>搜索精度</strong>：使用更具体的关键词和条件组合可以提高搜索精度</li>
+<li><strong>资源占用</strong>：复杂搜索可能占用较多系统资源，请在资源充足的设备上使用</li>
+<li><strong>隐私保护</strong>：搜索功能只能搜索您有权访问的对话内容</li>
+</ul>
+<h2 id="_18">常见问题解答<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h2>
+<p><strong>Q: 搜索功能会将我的聊天内容上传到服务器吗？</strong>
+A: 不会。TG-FF的搜索功能完全在本地进行，不会将您的对话内容上传到任何第三方服务器，充分保护您的隐私。</p>
+<p><strong>Q: 为什么有些消息无法被搜索到？</strong>
+A: 可能的原因包括：1) 消息内容是图片中的文字而非文本；2) 消息已被删除；3) 消息在您加入群组前发送且群组未保存完整历史记录。</p>
+<p><strong>Q: 如何搜索特定时间段内的所有媒体文件？</strong>
+A: 设置所需的时间范围，在消息类型中选择"媒体消息"，然后执行搜索，无需输入关键词。</p>
+<p><strong>Q: 搜索结果可以保存或分享吗？</strong>
+A: 是的，您可以使用"导出结果"功能将搜索结果导出为文本或CSV文件，然后保存或分享给他人。</p>
+<div class="adspace-bottom">
+<!-- Google Ads 位置 -->
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://t.me/tg_ff_group1" target="_blank" rel="noopener" title="TG-FF用户交流群" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M248 8C111.033 8 0 119.033 0 256s111.033 248 248 248 248-111.033 248-248S384.967 8 248 8Zm114.952 168.66c-3.732 39.215-19.881 134.378-28.1 178.3-3.476 18.584-10.322 24.816-16.948 25.425-14.4 1.326-25.338-9.517-39.287-18.661-21.827-14.308-34.158-23.215-55.346-37.177-24.485-16.135-8.612-25 5.342-39.5 3.652-3.793 67.107-61.51 68.335-66.746.153-.655.3-3.1-1.154-4.384s-3.59-.849-5.135-.5q-3.283.746-104.608 69.142-14.845 10.194-26.894 9.934c-8.855-.191-25.888-5.006-38.551-9.123-15.531-5.048-27.875-7.717-26.8-16.291q.84-6.7 18.45-13.7 108.446-47.248 144.628-62.3c68.872-28.647 83.183-33.623 92.511-33.789 2.052-.034 6.639.474 9.61 2.885a10.452 10.452 0 0 1 3.53 6.716 43.765 43.765 0 0 1 .417 9.769Z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["i18n", "navigation.tabs", "navigation.sections", "toc.integrate", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+        <script src="../../js/extra.js"></script>
+      
+    
+  </body>
+</html>

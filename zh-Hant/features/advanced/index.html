@@ -1,0 +1,1212 @@
+
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="详解TG-FF资源管理助手的高级功能，包括批量下载、自动下载、文本转发、多图文转发、对话互转和全文检索，满足专业用户的进阶需求。">
+      
+      
+        <meta name="author" content="TG-FF開發團隊">
+      
+      
+        <link rel="canonical" href="https://tg-ff.com/zh-Hant/features/advanced/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>TG-FF高级功能 - 个性化下载与信息检索专业指南 - TG-FF</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-TVEFRP16DY"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-TVEFRP16DY",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-TVEFRP16DY",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  
+  
+    
+      <meta name="keywords" content="Telegram批量下载,Telegram自动下载,电报消息转发,Telegram图文转发,电报对话互转,Telegram消息检索,Telegram受保护内容下载,电报限制内容保存,飞机群组限制破解,电报频道限制突破,Telegram禁止保存破解,飞机灰色图标下载,电报无法保存内容下载,Telegram受限制媒体下载,飞机群组保护破解,电报频道保护突破,Telegram媒体限制解除,飞机群组限制解除,电报频道限制解除,Telegram保护内容下载,飞机群组保护内容下载,电报频道保护内容下载,Telegram受保护媒体下载,飞机群组受保护媒体下载,电报频道受保护媒体下载,Telegram限制媒体下载,飞机群组限制媒体下载,电报频道限制媒体下载,Telegram禁止保存媒体下载,飞机群组禁止保存媒体下载,电报频道禁止保存媒体下载">
+    
+  
+  
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3978085335977110" crossorigin="anonymous"></script>
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳轉至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="頁首">
+    <a href="../../" title="TG-FF" class="md-header__button md-logo" aria-label="TG-FF" data-md-component="logo">
+      
+  <img src="../../../assets/images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            TG-FF
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              TG-FF高级功能 - 个性化下载与信息检索专业指南
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到暗色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到暗色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到亮色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到亮色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="選擇語言">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../features/advanced/" hreflang="zh" class="md-select__link">
+              简体中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="zh-Hant" class="md-select__link">
+              繁體中文
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜尋" placeholder="搜尋" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="搜尋">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空" aria-label="清空" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜尋引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="標籤頁" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link">
+        
+  
+    
+  
+  首頁
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../getting-started/" class="md-tabs__link">
+        
+  
+    
+  
+  入門指南
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../video-tutorials/" class="md-tabs__link">
+        
+  
+    
+  
+  使用教學
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../blog/" class="md-tabs__link">
+        
+  
+    
+  
+  博客
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../faq/" class="md-tabs__link">
+        
+  
+    
+  
+  常見問題
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../changelog/" class="md-tabs__link">
+        
+  
+    
+  
+  更新日誌
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../user-manual-v3/" class="md-tabs__link">
+          
+  
+  使用手冊
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="導航" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="TG-FF" class="md-nav__button md-logo" aria-label="TG-FF" data-md-component="logo">
+      
+  <img src="../../../assets/images/logo.png" alt="logo">
+
+    </a>
+    TG-FF
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    首頁
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    入門指南
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../video-tutorials/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    使用教學
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    博客
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    常見問題
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changelog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    更新日誌
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    使用手冊
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            使用手冊
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-manual-v3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    功能概覽
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    普通下載
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../batch-download/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    批量下載
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../batch-text-conversion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    批量轉文
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../message-forwarding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    訊息轉發
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../auto-download/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    自動下載
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../text-sending/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    文字發送
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resource-sending/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    資源發送
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../info-retrieval/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    資訊檢索
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="_1">高级功能<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>本章节详细介绍TG-FF资源管理助手 v3.0.0的高级功能，包括个性化下载的五个子模块以及信息检索功能的详细操作指南。</p>
+<div class="adspace-top">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3978085335977110"
+     crossorigin="anonymous"></script>
+</div>
+
+<h2 id="_2">个性化下载<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>个性化下载模块提供了五个强大的子功能，满足各种专业下载和转发需求。</p>
+<h3 id="1">1. 批量下载<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<p>批量下载功能用于大规模获取历史消息中的媒体文件，适合一次性下载大量资源。</p>
+<p><img alt="批量下载界面" src="../assets/images/4-1.png" width="700" /></p>
+<h4 id="_3">功能说明<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<p>批量下载将对历史消息进行下载，符合设置条件的历史消息，且消息中包含有图片或者视频，将进行下载。</p>
+<p><strong>注意</strong>：批量下载不记录进度，每次启动将进行新的下载，在任务没有完成之前，需谨慎停止。</p>
+<h4 id="_4">使用步骤<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
+<ol>
+<li><strong>设置下载条件</strong>：</li>
+<li>选择目标对话：在"对话选择"下拉菜单中选择要下载的对话</li>
+<li>设置关键词过滤：在"消息过滤"部分输入关键词（可选）</li>
+<li>
+<p>设置时间范围：选择开始日期和结束日期（可选）</p>
+</li>
+<li>
+<p><strong>设置保存目录</strong>：</p>
+</li>
+<li>点击"选择文件夹"按钮</li>
+<li>在弹出的文件夹选择器中选择保存位置</li>
+<li>
+<p>确认选择</p>
+</li>
+<li>
+<p><strong>启动下载</strong>：</p>
+</li>
+<li>点击"开始下载"按钮启动批量下载任务</li>
+<li>
+<p>下载进度将在下方进度条中显示</p>
+</li>
+<li>
+<p><strong>停止下载</strong>：</p>
+</li>
+<li>如需中途停止，点击"停止下载"按钮</li>
+<li>注意：停止后再次启动将从头开始下载</li>
+</ol>
+<h4 id="_5">高级设置<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>文件命名规则</strong>：可选择按照时间、发送者或自定义格式命名下载文件</li>
+<li><strong>最大下载数量</strong>：可设置最大下载的媒体文件数量</li>
+<li><strong>媒体类型筛选</strong>：可选择只下载图片、只下载视频或两者都下载</li>
+</ul>
+<div class="adspace-middle-1">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3978085335977110"
+     crossorigin="anonymous"></script>
+</div>
+
+<h3 id="2">2. 自动下载<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<p>自动下载功能持续监听新消息，自动下载符合条件的媒体内容，适合需要实时获取资源的场景。</p>
+<p><img alt="自动下载界面" src="../assets/images/4-2.png" width="700" /></p>
+<h4 id="_6">功能说明<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<p>自动下载将对新的消息进行监听，一旦收到符合设置条件的新消息，且消息中包含有图片或者视频，将进行自动下载。</p>
+<h4 id="_7">使用步骤<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<ol>
+<li><strong>设置监听条件</strong>：</li>
+<li>选择目标对话：在"监听对话"下拉菜单中选择要监听的对话</li>
+<li>设置关键词过滤：在"消息过滤"部分输入关键词（可选）</li>
+<li>
+<p>选择媒体类型：勾选"图片"和/或"视频"</p>
+</li>
+<li>
+<p><strong>设置保存目录</strong>：</p>
+</li>
+<li>点击"选择文件夹"按钮</li>
+<li>在弹出的文件夹选择器中选择保存位置</li>
+<li>
+<p>确认选择</p>
+</li>
+<li>
+<p><strong>启动监听</strong>：</p>
+</li>
+<li>点击"开始监听"按钮启动自动下载任务</li>
+<li>
+<p>监听状态将在下方状态栏中显示</p>
+</li>
+<li>
+<p><strong>停止监听</strong>：</p>
+</li>
+<li>如需停止监听，点击"停止监听"按钮</li>
+</ol>
+<h4 id="_8">高级设置<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>通知设置</strong>：可选择在新下载时显示桌面通知</li>
+<li><strong>重复文件处理</strong>：可设置如何处理重复的媒体文件（覆盖、重命名或跳过）</li>
+<li><strong>自动监听启动</strong>：可设置软件启动时自动开始监听</li>
+</ul>
+<div class="adspace-middle-2">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3978085335977110"
+     crossorigin="anonymous"></script>
+</div>
+
+<h3 id="3">3. 单文本转发<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
+<p>单文本转发功能用于将准备好的文本内容自动转发到指定对话，可设置转发频率和规则。</p>
+<p><img alt="单文本转发界面" src="../assets/images/4-3.png" width="700" /></p>
+<h4 id="_9">功能说明<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
+<p>将准备好的文本逐条转发到指定的对话，可以设置转发频率，转发规则。</p>
+<h4 id="_10">使用步骤<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h4>
+<ol>
+<li><strong>准备文本内容</strong>：</li>
+<li>在左侧文本区域输入需要转发的文本内容</li>
+<li>每行将被视为一条独立消息</li>
+<li>
+<p>或点击"导入文本"从本地文件导入文本内容</p>
+</li>
+<li>
+<p><strong>选择目标对话</strong>：</p>
+</li>
+<li>
+<p>在"目标对话"下拉菜单中选择要转发到的对话</p>
+</li>
+<li>
+<p><strong>设置转发规则</strong>：</p>
+</li>
+<li>转发间隔：设置两条消息之间的时间间隔（秒）</li>
+<li>
+<p>转发顺序：选择顺序发送或随机发送</p>
+</li>
+<li>
+<p><strong>启动转发</strong>：</p>
+</li>
+<li>点击"开始转发"按钮开始文本转发</li>
+<li>
+<p>转发进度将在下方进度条中显示</p>
+</li>
+<li>
+<p><strong>停止转发</strong>：</p>
+</li>
+<li>如需中途停止，点击"停止转发"按钮</li>
+</ol>
+<h4 id="_11">高级设置<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>循环发送</strong>：可设置是否循环发送文本内容</li>
+<li><strong>时间范围</strong>：可设置只在特定时间段内转发</li>
+<li><strong>转发格式</strong>：可选择普通文本或Markdown格式</li>
+</ul>
+<h3 id="4">4. 多图文转发<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
+<p>多图文转发功能支持同时转发文本和媒体文件，提供多种组合方式。</p>
+<p><img alt="多图文转发界面" src="../assets/images/4-4.png" width="700" /></p>
+<h4 id="_12">功能说明<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h4>
+<ol>
+<li>如果只添加文本内容，将对文本内容按顺序转发</li>
+<li>如果只添加了文件目录，就只对文件夹下的资源进行转发</li>
+<li>如果两者都添加了，每发送一条资源文件，同时顺序的获取一条文本内容作为标题发送</li>
+<li>文件发送支持：png、jpg、jpeg、mp4格式</li>
+</ol>
+<h4 id="_13">使用步骤<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h4>
+<ol>
+<li><strong>添加媒体文件</strong>：</li>
+<li>点击"选择文件夹"按钮选择包含媒体文件的文件夹</li>
+<li>
+<p>系统将自动加载支持的媒体文件</p>
+</li>
+<li>
+<p><strong>添加文本内容</strong>（可选）：</p>
+</li>
+<li>在文本区域输入需要作为标题的文本内容</li>
+<li>每行将被视为一条独立标题</li>
+<li>
+<p>或点击"导入文本"从本地文件导入文本内容</p>
+</li>
+<li>
+<p><strong>选择目标对话</strong>：</p>
+</li>
+<li>
+<p>在"目标对话"下拉菜单中选择要转发到的对话</p>
+</li>
+<li>
+<p><strong>设置转发规则</strong>：</p>
+</li>
+<li>转发间隔：设置两条消息之间的时间间隔（秒）</li>
+<li>
+<p>文件排序：选择按文件名、修改时间或随机排序</p>
+</li>
+<li>
+<p><strong>启动转发</strong>：</p>
+</li>
+<li>点击"开始转发"按钮开始多图文转发</li>
+<li>
+<p>转发进度将在下方进度条中显示</p>
+</li>
+<li>
+<p><strong>停止转发</strong>：</p>
+</li>
+<li>如需中途停止，点击"停止转发"按钮</li>
+</ol>
+<h4 id="_14">高级设置<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>发送模式</strong>：可选择媒体+文本、仅媒体或仅文本模式</li>
+<li><strong>媒体类型过滤</strong>：可选择只发送图片或视频</li>
+<li><strong>文件名作为标题</strong>：可选择使用文件名作为标题（不使用文本区域内容）</li>
+</ul>
+<div class="adspace-middle-3">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3978085335977110"
+     crossorigin="anonymous"></script>
+</div>
+
+<h3 id="5">5. 对话互转<a class="headerlink" href="#5" title="Permanent link">&para;</a></h3>
+<p>对话互转功能可以自动将一个对话中的新消息转发到另一个对话，实现消息自动转发。</p>
+<p><img alt="对话互转界面" src="../assets/images/4-5.png" width="700" /></p>
+<h4 id="_15">功能说明<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
+<p>当源对话收到消息后，自动转发到目标对话。</p>
+<h4 id="_16">使用步骤<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h4>
+<ol>
+<li><strong>选择源对话</strong>：</li>
+<li>
+<p>在"源对话"下拉菜单中选择消息来源对话</p>
+</li>
+<li>
+<p><strong>选择目标对话</strong>：</p>
+</li>
+<li>
+<p>在"目标对话"下拉菜单中选择消息转发目标</p>
+</li>
+<li>
+<p><strong>设置过滤条件</strong>（可选）：</p>
+</li>
+<li>在"消息过滤"部分输入关键词</li>
+<li>
+<p>选择是否转发包含媒体内容的消息</p>
+</li>
+<li>
+<p><strong>启动互转</strong>：</p>
+</li>
+<li>点击"开始监听"按钮启动对话互转功能</li>
+<li>
+<p>监听状态将在下方状态栏中显示</p>
+</li>
+<li>
+<p><strong>停止互转</strong>：</p>
+</li>
+<li>如需停止，点击"停止监听"按钮</li>
+</ol>
+<h4 id="_17">高级设置<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>转发模式</strong>：可选择完整转发或仅转发媒体内容</li>
+<li><strong>转发署名</strong>：可选择是否在转发消息中显示原始发送者</li>
+<li><strong>延迟转发</strong>：可设置收到消息后延迟一定时间再转发</li>
+</ul>
+<h2 id="_18">信息检索<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h2>
+<p>信息检索模块提供强大的消息索引和搜索功能，让您快速找到需要的聊天内容。</p>
+<p><img alt="信息检索界面" src="../../../assets/images/text.png" width="700" /></p>
+<h3 id="_19">功能说明<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h3>
+<p>信息检索功能包含三个子功能：
+1. <strong>自动检索</strong>：自动索引将对所有的新消息进行本地索引，方便进行全局信息检索
+2. <strong>历史检索</strong>：历史索引将对满足条件的消息进行本地索引，方便进行全局信息检索
+3. <strong>导出内容</strong>：将检索结果导出为可读格式</p>
+<h3 id="_20">自动检索使用步骤<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>启用自动索引</strong>：</li>
+<li>在"自动检索"选项卡中，点击"启用自动索引"开关</li>
+<li>
+<p>设置需要自动索引的对话（全部或指定对话）</p>
+</li>
+<li>
+<p><strong>设置索引规则</strong>（可选）：</p>
+</li>
+<li>关键词过滤：可设置只索引包含特定关键词的消息</li>
+<li>媒体内容：可选择是否索引包含媒体的消息</li>
+<li>
+<p>消息类型：可选择索引文本、图片描述或两者</p>
+</li>
+<li>
+<p><strong>启动自动索引</strong>：</p>
+</li>
+<li>点击"开始自动索引"按钮</li>
+<li>索引将在后台进行，不影响软件其他功能的使用</li>
+</ol>
+<h3 id="_21">历史检索使用步骤<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>设置检索条件</strong>：</li>
+<li>在"历史检索"选项卡中，选择要检索的对话</li>
+<li>设置时间范围（开始日期和结束日期）</li>
+<li>
+<p>输入关键词（可选）</p>
+</li>
+<li>
+<p><strong>启动历史索引</strong>：</p>
+</li>
+<li>点击"开始历史索引"按钮</li>
+<li>
+<p>索引进度将在下方进度条中显示</p>
+</li>
+<li>
+<p><strong>停止索引</strong>：</p>
+</li>
+<li>如需中途停止，点击"停止索引"按钮</li>
+</ol>
+<h3 id="_22">搜索和查看结果<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>执行搜索</strong>：</li>
+<li>在顶部搜索框中输入搜索关键词</li>
+<li>点击搜索按钮或按回车键</li>
+<li>
+<p>搜索结果将在下方结果列表中显示</p>
+</li>
+<li>
+<p><strong>筛选结果</strong>：</p>
+</li>
+<li>使用右侧的筛选选项（日期、对话、类型等）精确定位结果</li>
+<li>
+<p>点击"重置筛选"可清除所有筛选条件</p>
+</li>
+<li>
+<p><strong>查看内容</strong>：</p>
+</li>
+<li>点击任意搜索结果项可在右侧预览面板中查看详细内容</li>
+<li>双击结果项可跳转到原始消息位置</li>
+</ol>
+<h3 id="_23">导出内容<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>选择导出内容</strong>：</li>
+<li>在搜索结果中选择需要导出的内容（可多选）</li>
+<li>
+<p>或点击"全选"选择所有搜索结果</p>
+</li>
+<li>
+<p><strong>选择导出格式</strong>：</p>
+</li>
+<li>点击"导出"按钮</li>
+<li>
+<p>在弹出菜单中选择导出格式（TXT、HTML、CSV等）</p>
+</li>
+<li>
+<p><strong>设置导出选项</strong>：</p>
+</li>
+<li>在导出设置对话框中设置导出参数（包含媒体、格式化等）</li>
+<li>
+<p>点击"确定"继续</p>
+</li>
+<li>
+<p><strong>选择保存位置</strong>：</p>
+</li>
+<li>在文件保存对话框中选择导出文件的保存位置</li>
+<li>输入文件名</li>
+<li>点击"保存"完成导出</li>
+</ol>
+<h2 id="_24">官方支持渠道<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h2>
+<p>如果您在使用高级功能时遇到任何问题，请通过以下官方渠道寻求帮助：</p>
+<div class="tg-links">
+  <a href="https://t.me/tg_ff_bot?start=welcome" class="tg-link" target="_blank">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.05.01-.23-.08-.32-.1-.1-.24-.07-.35-.04-.15.04-2.43 1.55-3.44 2.28-.32.21-.62.31-.88.31-.26 0-.77-.13-1.14-.24-.46-.14-1.1-.32-1.03-.68.03-.18.17-.36.99-.57 3.65-1.58 6.03-2.45 7.13-2.73.9-.24 1.4-.11 1.73.25.19.2.22.44.13.75z"/></svg>
+    官方助手机器人
+  </a>
+  <a href="https://t.me/tg_ff_group1" class="tg-link" target="_blank">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
+    用户交流群
+  </a>
+</div>
+
+<div class="adspace-bottom">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3978085335977110"
+     crossorigin="anonymous"></script>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://t.me/tg_ff_group1" target="_blank" rel="noopener" title="TG-FF用户交流群" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M248 8C111.033 8 0 119.033 0 256s111.033 248 248 248 248-111.033 248-248S384.967 8 248 8Zm114.952 168.66c-3.732 39.215-19.881 134.378-28.1 178.3-3.476 18.584-10.322 24.816-16.948 25.425-14.4 1.326-25.338-9.517-39.287-18.661-21.827-14.308-34.158-23.215-55.346-37.177-24.485-16.135-8.612-25 5.342-39.5 3.652-3.793 67.107-61.51 68.335-66.746.153-.655.3-3.1-1.154-4.384s-3.59-.849-5.135-.5q-3.283.746-104.608 69.142-14.845 10.194-26.894 9.934c-8.855-.191-25.888-5.006-38.551-9.123-15.531-5.048-27.875-7.717-26.8-16.291q.84-6.7 18.45-13.7 108.446-47.248 144.628-62.3c68.872-28.647 83.183-33.623 92.511-33.789 2.052-.034 6.639.474 9.61 2.885a10.452 10.452 0 0 1 3.53 6.716 43.765 43.765 0 0 1 .417 9.769Z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["i18n", "navigation.tabs", "navigation.sections", "toc.integrate", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u62f7\u8c9d", "clipboard.copy": "\u62f7\u8c9d", "search.result.more.one": "\u6b64\u9801\u5c1a\u6709 1 \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.more.other": "\u6b64\u9801\u5c1a\u6709 # \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.none": "\u6c92\u6709\u627e\u5230\u7b26\u5408\u689d\u4ef6\u7684\u7d50\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u689d\u4ef6\u7684\u7d50\u679c", "search.result.other": "\u627e\u5230 # \u500b\u7b26\u5408\u689d\u4ef6\u7684\u7d50\u679c", "search.result.placeholder": "\u9375\u5165\u4ee5\u958b\u59cb\u6aa2\u7d22", "search.result.term.missing": "\u7f3a\u5931", "select.version": "\u9078\u64c7\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+        <script src="../../../js/extra.js"></script>
+      
+    
+  </body>
+</html>

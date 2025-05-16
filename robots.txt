@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+Disallow: /assets/js/
+Disallow: /assets/css/
+Disallow: /assets/fonts/
+
+# 允许所有页面被索引
+Allow: /index.html
+Allow: /faq/
+Allow: /features/
+Allow: /changelog/
+Allow: /getting-started/
+
+# 重要内容
+Allow: /features/overview/
+Allow: /features/basic/
+Allow: /features/advanced/
+
+# 搜索引擎优化指引
+Crawl-delay: 10
+
+# 站点地图
+Sitemap: https://tg-ff.com/sitemap.xml 

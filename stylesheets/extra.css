@@ -1,0 +1,440 @@
+/* Google Ads 样式 */
+
+/* 顶部广告位 */
+.adspace-top {
+  width: 100%;
+  height: 120px;
+  margin: 1.5rem 0;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #757575;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+/* 中间广告位 */
+.adspace-middle, .adspace-middle-1, .adspace-middle-2, .adspace-middle-3 {
+  width: 100%;
+  height: 100px;
+  margin: 1.5rem 0;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #757575;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+/* 底部广告位 */
+.adspace-bottom {
+  width: 100%;
+  height: 120px;
+  margin: 1.5rem 0;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #757575;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+/* 首页主广告位 */
+.adspace {
+  width: 100%;
+  height: 150px;
+  margin: 2rem 0;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #757575;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+/* 响应式调整 */
+@media screen and (max-width: 768px) {
+  .adspace-top, .adspace-middle, .adspace-middle-1, 
+  .adspace-middle-2, .adspace-middle-3, .adspace-bottom, .adspace {
+    height: 100px;
+    margin: 1rem 0;
+  }
+}
+
+/* 暗色模式调整 */
+[data-md-color-scheme="slate"] .adspace-top,
+[data-md-color-scheme="slate"] .adspace-middle,
+[data-md-color-scheme="slate"] .adspace-middle-1,
+[data-md-color-scheme="slate"] .adspace-middle-2,
+[data-md-color-scheme="slate"] .adspace-middle-3,
+[data-md-color-scheme="slate"] .adspace-bottom,
+[data-md-color-scheme="slate"] .adspace {
+  background-color: #2d2d2d;
+  color: #a0a0a0;
+}
+
+/* 下载图标样式 */
+.download-icon {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+  margin-right: 0.2rem;
+}
+
+/* 功能卡片图标样式 */
+.feature-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  color: #1565c0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* 图标定义 */
+.material-folder::before {
+  content: "\e2c7"; /* Material Icon code for folder */
+  font-family: 'Material Icons';
+}
+
+.material-download::before {
+  content: "\e2c0"; /* Material Icon code for download */
+  font-family: 'Material Icons';
+}
+
+.material-repeat::before {
+  content: "\e040"; /* Material Icon code for repeat */
+  font-family: 'Material Icons';
+}
+
+.material-magnify::before {
+  content: "\e8b6"; /* Material Icon code for search/magnify */
+  font-family: 'Material Icons';
+}
+
+/* Material Icons 样式 */
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+  color: inherit;
+}
+
+/* 标题中的图标样式 */
+h1 .material-icons,
+h2 .material-icons,
+h3 .material-icons,
+h4 .material-icons {
+  vertical-align: middle;
+  margin-right: 0.5rem;
+  color: #1565c0;
+}
+
+[data-md-color-scheme="slate"] h1 .material-icons,
+[data-md-color-scheme="slate"] h2 .material-icons,
+[data-md-color-scheme="slate"] h3 .material-icons,
+[data-md-color-scheme="slate"] h4 .material-icons {
+  color: #81b3ff;
+}
+
+/* 图片样式优化 */
+.md-typeset img {
+  display: block;
+  max-width: 90%;
+  height: auto;
+  margin: 1.5rem auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.md-typeset img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* 图片预览遮罩 */
+.image-preview-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  cursor: zoom-out;
+}
+
+.image-preview-overlay img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  border-radius: 4px;
+}
+
+/* 客服群和机器人链接样式 */
+.tg-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.tg-link {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1.25rem;
+  background-color: #3c99dc;
+  color: white !important;
+  border-radius: 4px;
+  text-decoration: none !important;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.tg-link:hover {
+  background-color: #2d88c7;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transform: translateY(-2px);
+}
+
+.tg-link svg {
+  margin-right: 0.5rem;
+  fill: white;
+}
+
+/* 高亮功能块样式 */
+.highlight-feature {
+  background-color: #e8f5e9 !important;
+  border-left: 4px solid #4caf50 !important;
+  border-radius: 4px !important;
+  padding: 1.5rem !important;
+  margin: 1.5rem 0 !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05) !important;
+  display: block !important;
+}
+
+.highlight-feature h3 {
+  color: #2e7d32 !important;
+  margin-top: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  font-weight: bold !important;
+}
+
+.highlight-feature p {
+  margin-bottom: 0 !important;
+  line-height: 1.6 !important;
+  color: #333333 !important;
+}
+
+/* 暗色模式高亮功能块 */
+[data-md-color-scheme="slate"] .highlight-feature {
+  background-color: #1e3b29 !important;
+  border-left: 4px solid #4caf50 !important;
+}
+
+[data-md-color-scheme="slate"] .highlight-feature h3 {
+  color: #81c784 !important;
+}
+
+[data-md-color-scheme="slate"] .highlight-feature p {
+  color: #e0e0e0 !important;
+}
+
+/* 主要模块卡片样式 */
+.feature-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.feature-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.feature-card h3 {
+  margin-top: 0;
+  color: #1565c0;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+}
+
+.feature-card h3 .material-icons {
+  margin-right: 0.5rem;
+  color: #1565c0;
+}
+
+.feature-card p {
+  color: #555;
+  margin-bottom: 0;
+}
+
+[data-md-color-scheme="slate"] .feature-card {
+  background-color: #2d2d2d;
+}
+
+[data-md-color-scheme="slate"] .feature-card h3,
+[data-md-color-scheme="slate"] .feature-card h3 .material-icons,
+[data-md-color-scheme="slate"] .feature-card h3 .feature-icon {
+  color: #81b3ff;
+}
+
+[data-md-color-scheme="slate"] .feature-card p {
+  color: #b0b0b0;
+}
+
+/* FAQ部分样式 */
+.faq-section {
+  margin: 2rem 0;
+}
+
+.faq-item {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.faq-item h4 {
+  margin-top: 0;
+  color: #1565c0;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.faq-item p {
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+[data-md-color-scheme="slate"] .faq-item {
+  background-color: #2d2d2d;
+}
+
+[data-md-color-scheme="slate"] .faq-item h4 {
+  color: #81b3ff;
+}
+
+[data-md-color-scheme="slate"] .faq-item p {
+  color: #b0b0b0;
+}
+
+/* Video Tutorials Page Styles */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  margin-bottom: 30px;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.download-btn {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.download-btn a {
+  display: inline-block;
+  background-color: var(--md-primary-fg-color);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.download-btn a:hover {
+  background-color: var(--md-primary-fg-color--dark);
+}
+
+.tips-box {
+  background-color: #f8f9fa;
+  border-left: 4px solid var(--md-primary-fg-color);
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.tips-box h4 {
+  margin-top: 0;
+  color: var(--md-primary-fg-color);
+}
+
+.tips-box ul {
+  margin-bottom: 0;
+}
+
+.user-case {
+  background-color: #f0f7ff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.faq-videos {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  margin: 30px 0;
+}
+
+@media (min-width: 768px) {
+  .faq-videos {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.faq-video-item h4 {
+  margin-bottom: 15px;
+  color: var(--md-primary-fg-color);
+} 

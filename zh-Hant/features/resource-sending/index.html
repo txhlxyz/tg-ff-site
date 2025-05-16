@@ -1,0 +1,1281 @@
+
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="详细介绍TG-FF资源管理助手v3.0.0的资源发送功能，帮助用户将本地媒体文件与文本结合发送到指定对话。">
+      
+      
+        <meta name="author" content="TG-FF開發團隊">
+      
+      
+        <link rel="canonical" href="https://tg-ff.com/zh-Hant/features/resource-sending/">
+      
+      
+        <link rel="prev" href="../text-sending/">
+      
+      
+        <link rel="next" href="../info-retrieval/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>TG-FF 3.0.0 用户手册 - 资源发送功能详解 - TG-FF</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-TVEFRP16DY"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-TVEFRP16DY",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-TVEFRP16DY",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  
+  
+    
+      <meta name="keywords" content="Telegram媒体发送,电报图片视频发送,TG-FF资源发送,Telegram批量发送文件,电报图文混合发送">
+    
+  
+  
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3978085335977110" crossorigin="anonymous"></script>
+
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳轉至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="頁首">
+    <a href="../../" title="TG-FF" class="md-header__button md-logo" aria-label="TG-FF" data-md-component="logo">
+      
+  <img src="../../../assets/images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            TG-FF
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              TG-FF 3.0.0 用户手册 - 资源发送功能详解
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到暗色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到暗色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换到亮色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到亮色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="選擇語言">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../features/resource-sending/" hreflang="zh" class="md-select__link">
+              简体中文
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="zh-Hant" class="md-select__link">
+              繁體中文
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜尋" placeholder="搜尋" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="搜尋">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空" aria-label="清空" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜尋引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="標籤頁" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../" class="md-tabs__link">
+        
+  
+    
+  
+  首頁
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../getting-started/" class="md-tabs__link">
+        
+  
+    
+  
+  入門指南
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../video-tutorials/" class="md-tabs__link">
+        
+  
+    
+  
+  使用教學
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../blog/" class="md-tabs__link">
+        
+  
+    
+  
+  博客
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../faq/" class="md-tabs__link">
+        
+  
+    
+  
+  常見問題
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../changelog/" class="md-tabs__link">
+        
+  
+    
+  
+  更新日誌
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../user-manual-v3/" class="md-tabs__link">
+          
+  
+  使用手冊
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="導航" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../" title="TG-FF" class="md-nav__button md-logo" aria-label="TG-FF" data-md-component="logo">
+      
+  <img src="../../../assets/images/logo.png" alt="logo">
+
+    </a>
+    TG-FF
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    首頁
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../getting-started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    入門指南
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../video-tutorials/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    使用教學
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    博客
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    常見問題
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../changelog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    更新日誌
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    使用手冊
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            使用手冊
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../user-manual-v3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    功能概覽
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    普通下載
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../batch-download/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    批量下載
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../batch-text-conversion/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    批量轉文
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../message-forwarding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    訊息轉發
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../auto-download/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    自動下載
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../text-sending/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    文字發送
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    資源發送
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    資源發送
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目錄">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目錄
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      功能说明
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      界面布局
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用步骤
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="使用步骤">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 选择媒体资源
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 准备文本内容（可选）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 准备文本内容（可选）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      直接输入文本
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      导入文本文件
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 选择目标对话
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 设置发送规则
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 设置发送规则">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      发送间隔设置
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      文件排序设置
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      发送模式设置
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 开始发送
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. 停止发送
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      高级设置
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="高级设置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      媒体类型筛选
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      文件名作为标题
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      子文件夹处理
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用场景
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="使用场景">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      图文混合推送
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      资源库分享
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      内容定期更新
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      注意事项
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      常见问题解答
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../info-retrieval/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    資訊檢索
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="_1">资源发送功能<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>本页面详细介绍TG-FF资源管理助手v3.0.0的资源发送功能。此功能用于发送本地媒体资源和文本内容到指定对话，支持多种发送方式和组合。</p>
+<div class="adspace-top">
+<!-- Google Ads 位置 -->
+</div>
+
+<h2 id="_2">功能说明<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>资源发送功能可以添加文件目录，对文件夹下的资源进行转发。如果两者（文本和文件目录）都添加了，每发送一条资源文件，同时顺序获取一条文本内容作为标题发送。文件发送支持多种媒体类型。</p>
+<h2 id="_3">界面布局<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p><img alt="资源发送界面" src="../../../assets/images/s2.png" width="700" /></p>
+<p>资源发送模块的界面主要包含以下几个部分：</p>
+<ol>
+<li><strong>资源选择区</strong> - 选择需要发送的本地媒体文件目录</li>
+<li><strong>文本编辑区</strong> - 输入或导入需要作为标题发送的文本内容</li>
+<li><strong>目标对话选择区</strong> - 选择资源将被发送到的目标对话</li>
+<li><strong>发送规则设置区</strong> - 设置发送频率和方式</li>
+<li><strong>操作控制区</strong> - 包含开始/停止发送按钮和状态显示</li>
+</ol>
+<h2 id="_4">使用步骤<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h3 id="1">1. 选择媒体资源<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<ol>
+<li>点击"选择文件夹"按钮</li>
+<li>在弹出的文件夹选择对话框中，浏览并选择包含媒体文件的文件夹</li>
+<li>点击"确定"确认选择</li>
+<li>所选文件夹路径将显示在输入框中，系统会自动扫描文件夹中的媒体文件</li>
+</ol>
+<h3 id="2">2. 准备文本内容（可选）<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<h4 id="_5">直接输入文本<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
+<ol>
+<li>在文本编辑框中直接输入需要作为标题发送的文本内容</li>
+<li>每行文本将被视为一条独立的标题，配合媒体文件发送</li>
+<li>可以包含表情符号、链接和简单格式标记</li>
+</ol>
+<h4 id="_6">导入文本文件<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
+<ol>
+<li>点击"导入文本"按钮</li>
+<li>在弹出的文件选择对话框中，选择包含文本内容的TXT文件</li>
+<li>点击"打开"，文件中的内容将被载入到文本编辑框</li>
+</ol>
+<h3 id="3">3. 选择目标对话<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
+<ol>
+<li>在"目标对话"下拉菜单中，浏览并选择资源将被发送到的对话</li>
+<li>确保您在目标对话中拥有发送媒体文件的权限</li>
+<li>选择完成后，目标对话名称将显示在选择框中</li>
+</ol>
+<h3 id="4">4. 设置发送规则<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
+<h4 id="_7">发送间隔设置<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<ol>
+<li>在"发送间隔"输入框中设置两条消息之间的时间间隔（秒）</li>
+<li>建议为媒体文件设置较长的间隔，特别是对于大型文件，以确保充分的上传时间</li>
+</ol>
+<h4 id="_8">文件排序设置<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
+<ol>
+<li>在"文件排序"选项中选择：</li>
+<li><strong>按文件名</strong>：按照文件名的字母顺序发送</li>
+<li><strong>按修改时间</strong>：按照文件的修改时间顺序发送</li>
+<li><strong>随机顺序</strong>：随机选择文件发送</li>
+</ol>
+<h4 id="_9">发送模式设置<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h4>
+<ol>
+<li>在"发送模式"选项中选择：</li>
+<li><strong>图片+文本</strong>：将媒体文件与文本标题一起发送</li>
+<li><strong>仅图片</strong>：只发送媒体文件，不附加文本标题</li>
+<li><strong>仅文本</strong>：只发送文本内容，不附加媒体文件</li>
+</ol>
+<h3 id="5">5. 开始发送<a class="headerlink" href="#5" title="Permanent link">&para;</a></h3>
+<ol>
+<li>完成上述设置后，点击"开始发送"按钮</li>
+<li>系统将根据设置的规则开始发送媒体文件和/或文本内容</li>
+<li>当前发送状态和进度将在状态区域显示</li>
+</ol>
+<h3 id="6">6. 停止发送<a class="headerlink" href="#6" title="Permanent link">&para;</a></h3>
+<ol>
+<li>如需停止发送，点击"停止发送"按钮</li>
+<li>发送任务将立即停止，不再发送新的内容</li>
+</ol>
+<h2 id="_10">高级设置<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h2>
+<h3 id="_11">媒体类型筛选<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h3>
+<ol>
+<li>点击"高级设置"展开更多选项</li>
+<li>在"媒体类型"部分选择需要发送的媒体类型：</li>
+<li><strong>图片</strong>：支持PNG、JPG、JPEG格式</li>
+<li><strong>视频</strong>：支持MP4格式</li>
+<li><strong>GIF</strong>：支持GIF动画图片</li>
+<li><strong>文件</strong>：支持其他类型的文件</li>
+</ol>
+<h3 id="_12">文件名作为标题<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<ol>
+<li>启用"使用文件名作为标题"选项，系统将自动使用媒体文件的文件名作为发送标题</li>
+<li>此选项启用后将忽略文本编辑框中的内容</li>
+</ol>
+<h3 id="_13">子文件夹处理<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<ol>
+<li>设置"包含子文件夹"选项：</li>
+<li><strong>启用</strong>：递归包含所选文件夹下所有子文件夹中的媒体文件</li>
+<li><strong>禁用</strong>：只包含选定文件夹中的媒体文件，不包含子文件夹</li>
+</ol>
+<h2 id="_14">使用场景<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h2>
+<h3 id="_15">图文混合推送<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<ol>
+<li>准备好媒体文件和对应的文本描述</li>
+<li>设置图片+文本模式发送</li>
+<li>适合产品展示、教程推送等需要图文结合的场景</li>
+</ol>
+<h3 id="_16">资源库分享<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<ol>
+<li>选择包含各类媒体文件的文件夹</li>
+<li>批量发送到目标群组或频道</li>
+<li>高效共享本地收集的资源库内容</li>
+</ol>
+<h3 id="_17">内容定期更新<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h3>
+<ol>
+<li>准备新的媒体资源和说明文本</li>
+<li>设置适当的发送间隔</li>
+<li>实现对话内容的定期自动更新</li>
+</ol>
+<h2 id="_18">注意事项<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>文件大小限制</strong>：Telegram对文件大小有限制，普通用户单个文件最大2GB</li>
+<li><strong>发送速率</strong>：大文件发送需要更长时间，请设置合理的发送间隔</li>
+<li><strong>媒体类型</strong>：确保文件夹中包含支持的媒体类型，当前主要支持图片（png、jpg、jpeg）和视频（mp4）</li>
+<li><strong>权限要求</strong>：确保在目标对话中拥有发送媒体文件的权限</li>
+<li><strong>网络要求</strong>：发送大量媒体文件需要稳定的网络连接和足够的带宽</li>
+</ul>
+<h2 id="_19">常见问题解答<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h2>
+<p><strong>Q: 支持哪些类型的媒体文件？</strong>
+A: 当前版本主要支持PNG、JPG、JPEG格式的图片和MP4格式的视频，未来版本可能会扩展支持更多格式。</p>
+<p><strong>Q: 媒体文件和文本如何配对发送？</strong>
+A: 系统会按照设定的文件排序方式遍历媒体文件，同时按文本在编辑框中的顺序依次获取文本作为标题。如果文本数量少于媒体文件，将循环使用文本。</p>
+<p><strong>Q: 发送大量媒体文件会遇到Telegram限制吗？</strong>
+A: 是的，Telegram对短时间内发送大量消息有限制。建议设置较长的发送间隔（如5-10秒或更长），并启用随机延迟功能减少被限制的风险。</p>
+<p><strong>Q: 如何处理发送失败的情况？</strong>
+A: 系统会自动记录发送失败的媒体文件，并在状态区域显示。您可以在发送完成后查看日志，了解哪些文件发送失败，然后重新尝试发送这些文件。</p>
+<div class="adspace-bottom">
+<!-- Google Ads 位置 -->
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://t.me/tg_ff_group1" target="_blank" rel="noopener" title="TG-FF用户交流群" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M248 8C111.033 8 0 119.033 0 256s111.033 248 248 248 248-111.033 248-248S384.967 8 248 8Zm114.952 168.66c-3.732 39.215-19.881 134.378-28.1 178.3-3.476 18.584-10.322 24.816-16.948 25.425-14.4 1.326-25.338-9.517-39.287-18.661-21.827-14.308-34.158-23.215-55.346-37.177-24.485-16.135-8.612-25 5.342-39.5 3.652-3.793 67.107-61.51 68.335-66.746.153-.655.3-3.1-1.154-4.384s-3.59-.849-5.135-.5q-3.283.746-104.608 69.142-14.845 10.194-26.894 9.934c-8.855-.191-25.888-5.006-38.551-9.123-15.531-5.048-27.875-7.717-26.8-16.291q.84-6.7 18.45-13.7 108.446-47.248 144.628-62.3c68.872-28.647 83.183-33.623 92.511-33.789 2.052-.034 6.639.474 9.61 2.885a10.452 10.452 0 0 1 3.53 6.716 43.765 43.765 0 0 1 .417 9.769Z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["i18n", "navigation.tabs", "navigation.sections", "toc.integrate", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "\u5df2\u62f7\u8c9d", "clipboard.copy": "\u62f7\u8c9d", "search.result.more.one": "\u6b64\u9801\u5c1a\u6709 1 \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.more.other": "\u6b64\u9801\u5c1a\u6709 # \u500b\u7b26\u5408\u7684\u9805\u76ee", "search.result.none": "\u6c92\u6709\u627e\u5230\u7b26\u5408\u689d\u4ef6\u7684\u7d50\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u689d\u4ef6\u7684\u7d50\u679c", "search.result.other": "\u627e\u5230 # \u500b\u7b26\u5408\u689d\u4ef6\u7684\u7d50\u679c", "search.result.placeholder": "\u9375\u5165\u4ee5\u958b\u59cb\u6aa2\u7d22", "search.result.term.missing": "\u7f3a\u5931", "select.version": "\u9078\u64c7\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+        <script src="../../../js/extra.js"></script>
+      
+    
+  </body>
+</html>
