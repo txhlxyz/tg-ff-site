@@ -860,6 +860,7 @@
     <li><a href="#step3" onclick="scrollToElement('step3')">3. 进入开发者工具</a></li>
     <li><a href="#step4" onclick="scrollToElement('step4')">4. 创建应用</a></li>
     <li><a href="#step5" onclick="scrollToElement('step5')">5. 获取API凭证</a></li>
+    <li><a href="#common-issues" onclick="scrollToElement('common-issues')">常见问题</a></li>
     <li><a href="#why-apply" onclick="scrollToElement('why-apply')">申请API的好处</a></li>
     <li><a href="#tips" onclick="scrollToElement('tips')">小贴士</a></li>
   </ul>
@@ -885,6 +886,7 @@ document.addEventListener('DOMContentLoaded', function() {
     '第三步：进入开发者工具页面': 'step3',
     '第四步：创建应用': 'step4',
     '第五步：获取API凭证': 'step5',
+    '常见问题与解决方案': 'common-issues',
     '为什么要申请自己的API凭证？': 'why-apply',
     '小贴士': 'tips'
   };
@@ -973,6 +975,36 @@ document.addEventListener('DOMContentLoaded', function() {
 <p>请将这两项信息复制并填写到TG-FF软件中的相应位置：</p>
 <p><img alt="API凭证" src="../../assets/blog/tg-ff-apply-appid/5.png" /></p>
 <p><img alt="填写到TG-FF" src="../../assets/blog/tg-ff-apply-appid/5-1.png" /></p>
+<h2 id="common-issues">常见问题与解决方案<a class="headerlink" href="#common-issues" title="Permanent link">&para;</a></h2>
+<p>在申请过程中，您可能会遇到一些问题。以下是常见的几种情况及其解决方法：</p>
+<h3 id="1-username">1. ❌ 未设置用户名（username）<a class="headerlink" href="#1-username" title="Permanent link">&para;</a></h3>
+<p>Telegram 要求您的账号设置了唯一的用户名，才能申请 API。</p>
+<p><strong>解决方法：</strong>
+- 打开 Telegram App
+- 进入设置（Settings）&gt; 用户名（Username）
+- 设置一个唯一的用户名（不是昵称）</p>
+<h3 id="2">2. ❌ 未绑定手机号或使用了匿名账户<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<p>不能使用未验证手机号或临时账号登录 my.telegram.org。</p>
+<p><strong>解决方法：</strong>
+- 确保您的 Telegram 是手机号注册的真实账号
+- 能正常登录手机端 Telegram 客户端</p>
+<h3 id="3-ip">3. ❌ 使用代理或 IP 被限制<a class="headerlink" href="#3-ip" title="Permanent link">&para;</a></h3>
+<p>如果您用了代理、VPN，或者您所在地的 IP 段被限制，可能导致登录后访问页面功能异常。</p>
+<p><strong>解决方法：</strong>
+- 更换网络或 VPN 节点（尝试新加坡、德国、英国等）
+- 使用无代理的环境或直接用海外 VPS 尝试</p>
+<h3 id="4-titleshort-name">4. ❌ 填写内容不规范（title、short name）<a class="headerlink" href="#4-titleshort-name" title="Permanent link">&para;</a></h3>
+<p>如果 App 名称包含非法字符，或 short name 重复，也可能导致错误。</p>
+<p><strong>解决方法：</strong>
+- App title: 不能有特殊符号
+- Short name: 必须唯一，不能重复，建议加随机后缀，如 myapp202505
+- Platform: 选 Android/iOS/Web/Windows 皆可
+- URL: 随便填一个合法格式（如 https://example.com）</p>
+<h3 id="5">5. ❌ 表单提交前未完成页面加载<a class="headerlink" href="#5" title="Permanent link">&para;</a></h3>
+<p>如果您在页面还未完全加载前点击提交，也可能返回"error"。</p>
+<p><strong>解决方法：</strong>
+- 重新刷新页面，等待完全加载后再填写
+- 尽量用 Chrome / Firefox 桌面浏览器操作</p>
 <h2 id="_3">使用说明<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <h3 id="why-apply">为什么要申请自己的API凭证？<a class="headerlink" href="#why-apply" title="Permanent link">&para;</a></h3>
 <p>您可能会问："为什么要自己申请这些凭证？"这里有几个重要原因：</p>
