@@ -1030,10 +1030,6 @@
 <h1 id="_1">网络连接常见问题<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
 <p><strong>TG-FF 是一款 Telegram 文件下载辅助工具，软件运行时需要直接连接 Telegram 官方服务器。</strong>
 由于网络限制，<strong>TG-FF 必须通过代理才能正常连接 Telegram 服务</strong>。如果你遇到"连接失败""无法登录"等问题，请参考以下 FAQ。</p>
-<div class="adspace-top">
-<!-- Google Ads 位置 -->
-</div>
-
 <h2 id="_2">网络连接基础问题<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <h3 id="q1-tg-ff">❓Q1：为什么 TG-FF 要使用代理才能工作？<a class="headerlink" href="#q1-tg-ff" title="Permanent link">&para;</a></h3>
 <p>TG-FF 使用 Telegram 官方接口直连服务器，这种连接在很多地区是被限制的。
@@ -1096,10 +1092,6 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>curl<span class="w"> </span>--socks5<span class="w"> </span><span class="m">127</span>.0.0.1:7890<span class="w"> </span>https://api.telegram.org
 </code></pre></div>
 <p>如返回 JSON 内容，则代理可用。</p>
-<div class="adspace-middle-1">
-<!-- Google Ads 位置 -->
-</div>
-
 <h2 id="_3">推荐代理方案<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <h3 id="q4">❓Q4：我不懂这些设置，是否能推荐一个"开箱即用"的方案？<a class="headerlink" href="#q4" title="Permanent link">&para;</a></h3>
 <p>当然可以，以下是推荐的简单方法：</p>
@@ -1118,10 +1110,16 @@
 <li>找到「订阅链接」「Clash 配置」等字样</li>
 <li>复制链接，在 Clash Verge 中点击「配置 → 添加订阅」粘贴进去即可</li>
 </ol>
+<p>Clash Verge 端口配置：</p>
+<div class="hero-image">
+    <img src="/assets/images/clash-verge.png" alt="clash-verge端口配置">
+  </div>
+
+<p><strong>这里直接使用7897端口，如果7897端口不行，请打开socks端口：7898，然后在TG-FF中使用7898</strong></p>
 <h4 id="tg-ff">在 TG-FF 中设置如下：<a class="headerlink" href="#tg-ff" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>代理类型：SOCKS5
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>地址：127.0.0.1
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>端口：7890
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>端口：7897
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>用户名/密码：空（如无认证）
 </code></pre></div>
 <p>点击测试连接，显示成功即完成设置。</p>
@@ -1170,7 +1168,7 @@
 </tr>
 <tr>
 <td><strong>大体积资源警戒</strong></td>
-<td>如果你持续下载大量超过 20MB 的文件，可能被 Telegram 限制下载带宽；</td>
+<td>如果你持续下载大量超大文件，可能被 Telegram 限制下载带宽；</td>
 </tr>
 <tr>
 <td><strong>异常访问频率</strong></td>
@@ -1186,7 +1184,6 @@
 <p>TG-FF 内置了<strong>最大同时并发下载数量为 5</strong> 的限制，并<strong>自动排队控制下载节奏</strong>，尽量模拟正常用户使用行为，降低触发 Telegram 限制的可能性。</p>
 <h4 id="_6">建议使用方式：<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h4>
 <ul>
-<li>单次下载任务的<strong>总大小建议控制在 500MB ~ 1GB 以下</strong>为宜；</li>
 <li>下载过程尽量自然分布，不要长时间连续下载多个大文件；</li>
 <li>如果你需要下载多个视频、音频、文档，建议<strong>分批进行</strong>；</li>
 <li>避免同时进行大批量下载 + 切换代理 + 登出登录等高风险组合操作；</li>
